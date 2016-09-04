@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<project default="main">
+	<property name="src" location="src"/>
+	<property name="build" location="build"/>
+	<property name="dist" location="dist"/>
+
+	<!-- Main Task -->
+	<target name="main" description="Main target">
+		<echo>Building the .jar file..!!</echo>
+	</target>
+<!--
+	<File Verification Task>
+	<target name="file.check">
+		<condition property="file.run">
+			<and>
+				<available file="src/main/java/com/aots/learn/HelloWorld.java"/>
+			</and>
+		</condition>
+	</target>
+-->
+	<!-- Java Compilation Task -->
+	<target name="compile" description="Compilation Target"> <!-- depends="file.check" if="file.run" -->
+		<echo>Java file available.. Starting the process now..!!</echo>
+		<javac srcdir="src/main/java/com/aots/learn"/>
+	</target>
+
+	<!-- Jar Building Task -->
+	<target name="compress" description="Compression of targets" depends="compile">
+		<jar jarfile="first-ant.jar" basedir="src/main/java/com/aots/learn" includes="*.class"/>
+	</target>
+</project>
