@@ -6,7 +6,7 @@
 
 	<!-- Main Task -->
 	<target name="main" description="Main target">
-		<echo>Building the .jar file..!!</echo>
+		<echo>Running Main Function..!!</echo>
 	</target>
 <!--
 	<File Verification Task>
@@ -26,6 +26,7 @@
 
 	<!-- Jar Building Task -->
 	<target name="compress" description="Compression of targets" depends="compile">
+		<echo>Building the .jar file..!!</echo>
 		<jar jarfile="first-ant.jar" basedir="src/main/java/com/aots/learn" includes="*.class"/>
 	</target>
 </project>
