@@ -6,7 +6,7 @@
 
 	<!-- Main Task -->
 	<target name="main" description="Main target">
-		<echo>Running Main Function..!!</echo>
+		<echo>Running Main Function..!! This function was modifiled..!!</echo>
 	</target>
 <!--
 	<File Verification Task>
